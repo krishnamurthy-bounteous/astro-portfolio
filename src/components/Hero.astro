@@ -2,7 +2,7 @@
 import { Icon } from "astro-icon/components";
 ---
 
-<div class="bg180 w-[100vw] h-[100vh] flex justify-between items-center">
+<div class="bg180 max-w-[100vw] h-[100vh] flex justify-between items-center">
   <div class="flex-1 flex justify-center">
     <div
       class="w-[200px] h-[200px] md:w-[300px] md:h-[300px] rounded-full bg-white"
@@ -10,13 +10,17 @@ import { Icon } from "astro-icon/components";
     </div>
   </div>
   <div class="flex-1 flex justify-center">
-    <div class="text-white font-mono text-3xl">
-      <h1 class="flex flex-col">
+    <div class="text-white font-mono text-4xl flex flex-col gap-4">
+      <h1 class="flex flex-col gap-2">
         <span>Hi!</span>
         <span>I'm Krishnamurthy,</span>
-        <span>a fullstack developer</span>
-        <Icon name="mdi:github" />
+        <span>a fullstack developer.</span>
       </h1>
+      <div class="flex gap-16">
+        <Icon name="mdi:github" class="h-10 w-10" />
+        <Icon name="mdi:linkedin" class="h-10 w-10" />
+        <Icon name="mdi:gmail" class="h-10 w-10" />
+      </div>
     </div>
   </div>
 </div>
