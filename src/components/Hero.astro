@@ -1,0 +1,28 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<div class="bg180 w-[100vw] h-[100vh] flex justify-between items-center">
+  <div class="flex-1 flex justify-center">
+    <div
+      class="w-[200px] h-[200px] md:w-[300px] md:h-[300px] rounded-full bg-white"
+    >
+    </div>
+  </div>
+  <div class="flex-1 flex justify-center">
+    <div class="text-white font-mono text-3xl">
+      <h1 class="flex flex-col">
+        <span>Hi!</span>
+        <span>I'm Krishnamurthy,</span>
+        <span>a fullstack developer</span>
+        <Icon name="mdi:github" />
+      </h1>
+    </div>
+  </div>
+</div>
+
+<style>
+  .bg180 {
+    background: conic-gradient(from 180deg, #1f1f1f, #14517e);
+  }
+</style>
