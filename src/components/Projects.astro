@@ -4,15 +4,15 @@ import projectImages from "../../public/images/projectImages/projectImages";
 import Project from "./Project.astro";
 ---
 
-<div class="bg180 max-w-[100vw] max-h-[100vh] flex justify-between items-center">
+<div class="bg180 max-w-[100vw] max-h-[100vh] flex justify-between items-center overflow-scroll">
   <div class="flex-1 flex justify-center">
     <div class="">
       {projectImages.map((project) => <Project project={project} />)}
     </div>
   </div>
   <div class="flex-1 flex justify-center">
-    <div class="text-white font-mono text-4xl flex flex-col gap-4">
-      <h1 class="flex flex-col gap-2">Projects</h1>
+    <div class="text-white font-mono text-4xl fixed top-[300px]">
+      <h1 class="flex flex-col gap-2 -z-10 absolute">Projects</h1>
     </div>
   </div>
 </div>
