@@ -2,11 +2,11 @@
 import { Icon } from "astro-icon/components";
 ---
 
-<div class="bg max-w-[100vw] h-[100vh] flex justify-between items-center relative">
+<div class="bg max-w-[100vw] h-[100vh] flex justify-between items-center relative flex-wrap">
   <div class="flex flex-1 justify-center">
     <h2 class="text-white font-mono text-4xl">Experience</h2>
   </div>
-  <div class="flex-1 text-white font-mono flex justify-center">
+  <div class="flex-1 text-white font-mono flex justify-center min-w-[340px]">
     <div class="flex flex-col gap-8">
       <img src="images/bxa.png" class="w-80" />
       <div class="flex gap-2 flex-col">
@@ -22,6 +22,12 @@ import { Icon } from "astro-icon/components";
   <style>
     .bg {
       background: conic-gradient(#14517e, #1f1f1f);
+    }
+
+    @media (max-width: 767px) {
+      .bg {
+        background: conic-gradient(from 270deg, #14517e, #1f1f1f);
+      }
     }
 
     img {

@@ -2,7 +2,9 @@
 import { Icon } from "astro-icon/components";
 ---
 
-<div class="bg180 max-w-[100vw] h-[100vh] flex justify-between items-center relative z-10">
+<div
+  class="bg180 max-w-[100vw] h-[100vh] flex justify-between items-center relative flex-wrap"
+>
   <div class="flex-1 flex justify-center">
     <div
       class="w-[200px] h-[200px] md:w-[300px] md:h-[300px] rounded-full bg-white"
@@ -10,11 +12,11 @@ import { Icon } from "astro-icon/components";
     </div>
   </div>
   <div class="flex-1 flex justify-center">
-    <div class="text-white font-mono text-4xl flex flex-col gap-4">
+    <div class="text-white font-mono md:text-4xl text-2xl flex flex-col gap-4">
       <h1 class="flex flex-col gap-2">
         <span>Hi!</span>
         <span>I'm Krishnamurthy,</span>
-        <span>a fullstack developer.</span>
+        <span class="typewriter">a fullstack developer.</span>
       </h1>
       <div class="flex gap-16">
         <Icon name="mdi:github" class="h-10 w-10" />
@@ -28,5 +30,43 @@ import { Icon } from "astro-icon/components";
 <style>
   .bg180 {
     background: conic-gradient(from 180deg, #1f1f1f, #14517e);
+  }
+
+  @media (max-width: 767px) {
+    .bg180 {
+      background: conic-gradient(from 270deg, #1f1f1f, #14517e);
+    }
+  }
+
+  .typewriter {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: 0.15em solid #1f1f1f; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: 0.1em; /* Adjust as needed */
+    animation:
+      typing 3.5s steps(40, end),
+      blink-caret 0.75s step-end infinite;
+  }
+
+  /* The typing effect */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: white;
+    }
   }
 </style>

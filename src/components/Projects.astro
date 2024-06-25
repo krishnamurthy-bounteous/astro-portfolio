@@ -1,24 +1,30 @@
 ---
 import { Icon } from "astro-icon/components";
-import projectImages from "../../public/images/projectImages/projectImages";
-import Project from "./Project.astro";
+import projectImages from "../projectImages";
+import ProjectsCarousel from "./ProjectsCarousel";
+// import ProjectsCarousel from "./ProjectsCarousel";
 ---
 
-<div class="bg180 max-w-[100vw] max-h-[100vh] flex justify-between items-center overflow-scroll">
-  <div class="flex-1 flex justify-center">
-    <div class="">
-      {projectImages.map((project) => <Project project={project} />)}
-    </div>
+<div
+  class="bg180 max-w-[100vw] min-h-[100vh] flex justify-between items-center flex-wrap-reverse"
+>
+  <div class="min-w-[340px] flex-1 flex justify-center items-center md:pl-12">
+    <ProjectsCarousel client:load />
   </div>
   <div class="flex-1 flex justify-center">
-    <div class="text-white font-mono text-4xl fixed top-[300px]">
-      <h1 class="flex flex-col gap-2 -z-10 absolute">Projects</h1>
+    <div class="text-white font-mono text-4xl">
+      <h1 class="flex flex-col gap-2 -z-10">Projects</h1>
     </div>
   </div>
 </div>
-
 <style>
   .bg180 {
     background: conic-gradient(from 180deg, #1f1f1f, #14517e);
+  }
+
+  @media (max-width: 767px) {
+    .bg180 {
+      background: conic-gradient(from 270deg, #1f1f1f, #14517e);
+    }
   }
 </style>
