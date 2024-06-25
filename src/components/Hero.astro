@@ -7,7 +7,9 @@ import { Icon } from "astro-icon/components";
 >
   <div class="flex-1 flex justify-center">
     <div
-      class="w-[200px] h-[200px] md:w-[300px] md:h-[300px] rounded-full bg-white"
+      data-aos="zoom-in"
+      data-aos-delay="100"
+      class="w-[200px] h-[200px] md:w-[300px] md:h-[300px] rounded-full"
     >
       <img src="images/dp.png" class="rounded-full object-cover" />
     </div>
@@ -15,20 +17,38 @@ import { Icon } from "astro-icon/components";
   <div class="flex-1 flex justify-center">
     <div class="text-white font-mono md:text-4xl text-2xl flex flex-col gap-4">
       <h1 class="flex flex-col gap-2 justify-start items-start">
-        <span>Hi!</span>
-        <span>I'm Krishnamurthy,</span>
-        <span class="typewriter flex justify-start items-start"
-          >a fullstack developer.</span
+        <span data-aos="fade-left" data-aos-delay="100">Hi!</span>
+        <span data-aos="fade-left" data-aos-delay="200">I'm Krishnamurthy,</span
+        >
+        <span
+          data-aos="fade-left"
+          data-aos-delay="300"
+          class="flex justify-start items-start">a fullstack developer.</span
         >
       </h1>
       <div class="flex gap-16">
-        <a href="https://github.com/krishna2k3" target="_blank">
+        <a
+          href="https://github.com/krishna2k3"
+          target="_blank"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
           <Icon name="mdi:github" class="h-10 w-10" />
         </a>
-        <a href="https://www.linkedin.com/in/krishnamurthy-r-2k3/" target="_blank">
+        <a
+          href="https://www.linkedin.com/in/krishnamurthy-r-2k3/"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          target="_blank"
+        >
           <Icon name="mdi:linkedin" class="h-10 w-10" />
         </a>
-        <a href="mailto:krishna.ravi.contact@gmail.com" target="_blank">
+        <a
+          href="mailto:krishna.ravi.contact@gmail.com"
+          target="_blank"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
           <Icon name="mdi:gmail" class="h-10 w-10" />
         </a>
       </div>

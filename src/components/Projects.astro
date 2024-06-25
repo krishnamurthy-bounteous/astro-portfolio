@@ -8,12 +8,24 @@ import ProjectsCarousel from "./ProjectsCarousel";
 <section
   class="bg180 max-w-[100vw] min-h-[100vh] flex justify-between items-center flex-wrap-reverse"
 >
-  <div class="min-w-[340px] flex-1 flex justify-center items-center md:pl-12">
+  <div
+    class="min-w-[340px] flex-1 flex justify-center items-center md:pl-12"
+    data-aos="fade-right"
+    data-aos-delay="300"
+  >
     <ProjectsCarousel client:load />
   </div>
-  <div class="flex-1 flex justify-center">
+  <div class="flex-1
+    flex
+    justify-center">
     <div class="text-white font-mono text-4xl">
-      <h1 class="flex flex-col gap-2 -z-10">Projects</h1>
+      <h1
+        class="flex flex-col gap-2 -z-10"
+        data-aos="fade-left"
+        data-aos-delay="100"
+      >
+        Projects
+      </h1>
     </div>
   </div>
 </section>

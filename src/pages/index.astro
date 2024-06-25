@@ -4,6 +4,7 @@ import Hero from "../components/Hero.astro";
 import Skills from "../components/Skills.astro";
 import Projects from "../components/Projects.astro";
 import Experience from "../components/Experience.astro";
+import "aos/dist/aos.css";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -60,3 +61,7 @@ import Experience from "../components/Experience.astro";
     padding: 0;
   }
 </style>
+<script>
+  import AOS from "aos";
+  AOS.init();
+</script>
