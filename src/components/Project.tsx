@@ -15,20 +15,32 @@ interface Props {
 
 const ProjectComponent: React.FC<Props> = ({ project }) => {
   return (
-    <div className="flex-1 font-mono text-white flex gap-4 flex-col md:w-[480px] w-[340px] pb-8">
+    <div className="flex-1 font-mono text-white flex gap-4 flex-col md:w-[480px] w-[340px] pb-4">
       <img
         className="w-[480px] rounded-xl"
         src={project.src}
         alt={project.name}
+        data-aos="zoom-in"
+        data-aos-delay="200"
       />
-      <h2 className="text-2xl">{project.name}</h2>
-      <p className="flex flex-wrap">{project.description}</p>
-      <div className="flex flex-wrap">
+      <h2 className="text-2xl" data-aos="fade-right" data-aos-delay="100">
+        {project.name}
+      </h2>
+      <p className="flex flex-wrap" data-aos="fade-right" data-aos-delay="200">
+        {project.description}
+      </p>
+      <div
+        className="flex flex-wrap"
+        data-aos="fade-right"
+        data-aos-delay="300"
+      >
         {project.stack.map((skill, index) => (
           <img
             key={index}
             src={skills[skill]}
             alt={skill}
+            data-aos="fade-up-right"
+            data-aos-delay={`${index * 150}`}
           />
         ))}
       </div>
