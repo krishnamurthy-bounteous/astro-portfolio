@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "@iconify-json/mdi": "^1.1.67",
+    "@types/aos": "^3.0.7",
     "@types/react-slick": "^0.23.13"
   }
 }
