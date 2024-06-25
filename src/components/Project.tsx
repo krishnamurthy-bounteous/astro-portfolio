@@ -5,9 +5,8 @@ interface Project {
   name: string;
   description: string;
   src: string;
-  stack: string[];
+  stack: (keyof typeof skills)[];
   link: string;
-  // Add other project properties as needed
 }
 
 interface Props {

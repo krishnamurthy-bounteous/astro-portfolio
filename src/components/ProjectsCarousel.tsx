@@ -10,6 +10,7 @@ import "swiper/css/scrollbar";
 import Project from "./Project";
 import projectImages from "../projectImages";
 
+
 export const ProjectsCarousel = () => {
   return (
     <Swiper
